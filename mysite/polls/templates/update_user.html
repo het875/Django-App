@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update User</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 400px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+        border-color: #3498db;
+    }
+
+    button {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    .error-message {
+        color: #e74c3c;
+        margin-top: 5px;
+        font-size: 14px;
+        font-style: italic;
+        animation: fadeInDown 0.5s ease;
+    }
+
+    .success-message {
+        color: #27ae60;
+        margin-top: 5px;
+        font-size: 14px;
+        font-style: italic;
+        animation: fadeInDown 0.5s ease;
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container animate__animated animate__fadeIn">
+    {% if error_message %}
+    <div class="error-message">
+        {{ error_message }}
+    </div>
+    {% endif %}
+    {% if success_message %}
+    <div class="success-message">
+        {{ success_message }}
+    </div>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}" required>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ user.username }}" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ user.email_id }}" required>
+        <label for="mobile_number">Mobile Number:</label>
+        <input type="tel" id="mobile_number" name="mobile_number" value="{{ user.mobile_number }}" required>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male" {% if user.gender == 'Male' %} selected {% endif %}>Male</option>
+            <option value="Female" {% if user.gender == 'Female' %} selected {% endif %}>Female</option>
+            <option value="Other" {% if user.gender == 'Other' %} selected {% endif %}>Other</option>
+        </select>
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" value="{{ user.date_of_birth }}" required>
+        <button type="submit">Update User</button>
+    </form>
+</div>
+</body>
+</html> 
+
+
+
+<!-- update_user.html -->
+{% comment %} {% if error_message %}
+    <p>{{ error_message }}</p>
+{% endif %}
+{% if success_message %}
+    <p>{{ success_message }}</p>
+{% endif %}
+<form method="POST">
+    {% csrf_token %}
+    <!-- Input fields for user information -->
+    <button type="submit">Update User</button>
+</form> {% endcomment %}

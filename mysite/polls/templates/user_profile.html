@@ -1,0 +1,273 @@
+<!-- design 1 -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-info {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+        .profile-info p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        .profile-info strong {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .profile-info .label {
+            font-weight: bold;
+            color: #333;
+        }
+        .profile-info .value {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="profile-info">
+            <p class="label">First Name:</p>
+            <p class="value">{{ user_profile.first_name }}</p>
+            <p class="label">Last Name:</p>
+            <p class="value">{{ user_profile.last_name }}</p>
+            <p class="label">Username:</p>
+            <p class="value">{{ user_profile.username }}</p>
+            <p class="label">Email:</p>
+            <p class="value">{{ user_profile.email_id }}</p>
+            <p class="label">Mobile Number:</p>
+            <p class="value">{{ user_profile.mobile_number }}</p>
+            <p class="label">Gender:</p>
+            <p class="value">{{ user_profile.gender }}</p>
+            <p class="label">Date of Birth:</p>
+            <p class="value">{{ user_profile.date_of_birth }}</p>
+        </div>
+    </div>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+ 
+ <!-- design 2 -->
+ <!--  
+ <!DOCTYPE html>
+ <html lang="en">
+     <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .info-box {
+            background-color: #f2f9ff;
+            border: 1px solid #c9e0ff;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .info-box p {
+            margin: 5px 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+        .value {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="info-box">
+            <p class="label">First Name:</p>
+            <p class="value">{{ user_profile.first_name }}</p>
+        </div>
+        <div class="info-box">
+            <p class="label">Last Name:</p>
+            <p class="value">{{ user_profile.last_name }}</p>
+        </div>
+        <div class="info-box">
+            <p class="label">Username:</p>
+            <p class="value">{{ user_profile.username }}</p>
+        </div>
+        <div class="info-box">
+            <p class="label">Email:</p>
+            <p class="value">{{ user_profile.email_id }}</p>
+        </div>
+        <div class="info-box">
+            <p class="label">Mobile Number:</p>
+            <p class="value">{{ user_profile.mobile_number }}</p>
+        </div>
+        <div class="info-box">
+            <p class="label">Gender:</p>
+            <p class="value">{{ user_profile.gender }}</p>
+        </div>
+        <div class="info-box">
+            <p class="label">Date of Birth:</p>
+            <p class="value">{{ user_profile.date_of_birth }}</p>
+        </div>
+    </div>
+</body>-
+</html> 
+
+-->
+
+
+
+<!-- design 3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            {% comment %} background-color: #f4f4f4; {% endcomment %}
+            background: linear-gradient(135deg, #e3e3e3 0%, #d4f7dc 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            color: #333;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+            margin-right: 15px;
+            display: block;
+        }
+        .value {
+            color: #333;
+            font-size: 18px;
+            flex-grow: 1;
+            font-weight: bold;
+        }
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+ <body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="info-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Username Icon" class="icon">
+            <span class="label">Username:</span>
+            <p class="value">{{ user_profile.username }}</p>
+        </div>
+        <div class="info-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/9344/9344632.png" alt="Last Name Icon" class="icon">
+            <span class="label">Last Name:</span>
+            <p class="value">{{ user_profile.last_name }}</p>
+        </div>
+        <div class="info-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/6089/6089035.png" alt="First Name Icon" class="icon">
+            <span class="label">Frist Name:</span>
+            <p class="value">{{ user_profile.first_name }}</p>
+        </div>
+        <div class="info-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/9068/9068642.png" alt="Email Icon" class="icon">
+            <span class="label">Email:</span>
+            <p class="value">{{ user_profile.email_id }}</p>
+        </div>
+        <div class="info-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/186/186239.png" alt="Mobile Number Icon" class="icon">
+            <span class="label">Mobile Number:</span>
+            <p class="value">{{ user_profile.mobile_number }}</p>
+        </div>
+        <div class="info-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1647/1647794.png" alt="Gender Icon" class="icon">
+            <span class="label">Gender:</span>
+            <p class="value">{{ user_profile.gender }}</p>
+        </div>
+        <div class="info-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/4285/4285532.png" alt="Date of Birth Icon" class="icon">
+            <span class="label">Date of Birth:</span>
+            <p class="value">{{ user_profile.date_of_birth }}</p>
+        </div>
+    </div>
+</body> 

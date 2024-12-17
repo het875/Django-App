@@ -1,0 +1,91 @@
+<!-- registration_success.html -->
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+</head>
+<body>
+    <h1>Registration Successful!</h1>
+    <p>Your registration was successful. You can now log in or continue using our services.</p>
+</body>
+</html> {% endcomment %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div id="root"></div> <!-- React will render here -->
+    <script src="react.development.js"></script> <!-- React development version -->
+    <script src="react-dom.development.js"></script> <!-- React DOM development version -->
+    <script src="react-scripts.js"></script> <!-- Your React script file -->
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e3e3e3 0%, #d4f7dc 50%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: rgb(0,166,125);
+            font-size: 36px;
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful!</h1>
+        <p>Your registration was successful. You can now log in or continue using our services.</p>
+    </div>
+</body>
+</html>

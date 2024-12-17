@@ -1,0 +1,191 @@
+
+<!-- parameter_req.html -->
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Username Parameter Required</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #333;
+  }
+  p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .required-message {
+    color: #f00;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Username Parameter Required</h1>
+    <p class="required-message">Username parameter is required.</p>
+    <p>Please provide a valid username to proceed.</p>
+  </div>
+</body>
+</html> {% endcomment %}
+
+
+
+{% comment %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Username Parameter Required</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-top: 10px solid #ff7f50;
+  }
+  h1 {
+    color: #ff7f50;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffdab9;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .required-message {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .username {
+    color: #007bff;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Oops!</h1>
+    <p class="message">
+      <span class="required-message">Error:</span>
+      <span class="username">Username</span> parameter is required.
+    </p>
+    <p>Please provide a valid username to proceed.</p>
+  </div>
+</body>
+</html> {% endcomment %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Username Parameter Required</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    {% comment %} background: linear-gradient(135deg, #e3e3e3 0%, #f5f5f5 100%); {% endcomment %}
+    background: linear-gradient(135deg, #e3e3e3 0%, #ffffcc 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ffc107;
+    text-align: center; /* Center-align text inside container */
+    animation: popIn 0.5s ease forwards; /* Apply pop animation */
+  }
+  @keyframes popIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  h1 {
+    color: #ffc107;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .message-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f44336;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Oops!</h1>
+    <p>Please provide a valid <span style="color: #ff5722;">Username</span> to proceed.</p>
+    <div class="message-box">
+      <span style="background-color: #4caf50; padding: 8px; border-radius: 5px;">Error:</span>
+      <span style="margin-left: 10px;">Username parameter is required.</span>
+    </div>
+  </div>
+</body>
+</html> 
+
+

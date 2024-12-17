@@ -1,0 +1,203 @@
+{% comment %} <!-- user_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        /* Basic styles for form layout */
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form method="POST" action="{% url 'submit_user_form' %}">
+        {% csrf_token %}
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" value="heig" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="lathiya" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="het875" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="het977@gmail.com" required>
+
+        <label for="mobile_number">Mobile Number:</label>
+        <input type="tel" id="mobile_number" name="mobile_number" value="8758803220" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="het@875880" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male" selected>Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" value="2000-10-10" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        /* Basic styles for form layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #28879F;
+            font-size: 2.5rem;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border-color: #2ecc71;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .message {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="{% url 'submit_user_form' %}">
+        {% csrf_token %}
+        <h1>User Registration</h1>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" value="heig" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="lathiya" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="het875" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="het977@gmail.com" required>
+
+        <label for="mobile_number">Mobile Number:</label>
+        <input type="tel" id="mobile_number" name="mobile_number" value="8758803220" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="het@875880" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male" selected>Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" value="2000-10-10" required>
+
+        <button type="submit">Register <span class="icon">➡️</span></button>
+        <p class="message">Already have an account? 
+            {% comment %} <a href="{% url 'login' %}">Login here</a> {% endcomment %}
+        </p>
+    </form>
+</body>
+</html>
