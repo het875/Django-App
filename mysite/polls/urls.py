@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UserListApiView,OTPSendView
+from .views import *
 
 
 urlpatterns = [
