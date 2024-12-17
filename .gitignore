@@ -1,0 +1,15 @@
+# Ignore all .env files
+*.env
+
+# Ignore all .pyc files
+*.pyc
+__pycache__/
+
+# Ignore db.sqlite3 files
+# db.sqlite3
+
+# Ignore media folder
+media/
+media
+.media
+/mysite/media
